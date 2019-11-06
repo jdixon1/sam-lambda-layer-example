@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dev": "sam local start-api",
+    "build": "sam package --template-file template.yml --output-template-file build.yml --s3-bucket rw-mg-connector",
+    "deploy": "sam deploy --template-file build.yml --stack-name rw-mg-connector --capabilities CAPABILITY_IAM"
+  }
+}
